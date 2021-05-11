@@ -2,5 +2,5 @@ module.exports = {
   siteMetadata: {
     title: "bananachiptech",
   },
-  plugins: [],
+  plugins: ["gatsby-plugin-image"],
 };
