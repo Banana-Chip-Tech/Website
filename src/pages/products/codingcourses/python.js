@@ -43,7 +43,7 @@ const CodingPage = () => {
               <li>Text Editors and IDEs for coding in python</li>
             </ul>
             <br></br>
-            <iframe title="Lesson1" width="420" height="315" src="https://youtu.be/NaLtBvxNIPE"> </iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rRp4is2MExo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </Card.Body>
           </Accordion.Collapse>
         </Card>
@@ -55,24 +55,42 @@ const CodingPage = () => {
           </Card.Header>
           <Accordion.Collapse eventKey="1">
             <Card.Body>
+            <div>
             Topics Covered in this lesson
               <ul>
                 <li>Input</li>
                 <li>Output</li>
               </ul>
-              <br></br>
-              <iframe title="Lesson2" width="420" height="315" src="https://www.youtube.com/watch?v=QZgGpCXGH54"> </iframe>
+            </div>
+            <div>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/QZgGpCXGH54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div>
+              Homework 1 problems:
 
+              <ol>
+                <li>Write a program that prints hello world to the screen </li>
+
+                <li>Write a program that asks the user to input their name, age, and favorite food.</li>
+
+                <li>Write a program that asks the user for their name and prints it back out to the user.</li>
+
+                <li>Read information from the <a href="/HW1input.txt" download> input.txt</a> file. Display this information back out to the user. </li>
+              </ol>
+            </div>
+            <div>
+              Homework 1 Solutions: <a href="https://youtu.be/rRp4is2MExo">Video</a>
+            </div>
             </Card.Body>
           </Accordion.Collapse>
         </Card>
         <Card>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="1">
+            <Accordion.Toggle as={Button} variant="link" eventKey="2">
              Lesson 3: Variables
             </Accordion.Toggle>
           </Card.Header>
-          <Accordion.Collapse eventKey="1">
+          <Accordion.Collapse eventKey="2">
             <Card.Body>
             Topics Covered in this lesson
               <ul>
@@ -95,7 +113,7 @@ const CodingPage = () => {
                 </li>
               </ul>
               <br></br>
-              <iframe title="Lesson3" width="420" height="315" src="https://www.youtube.com/watch?v=CsybBZ-TnSI"> </iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/CsybBZ-TnSI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             </Card.Body>
           </Accordion.Collapse>
