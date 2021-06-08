@@ -4,12 +4,13 @@ import {Card,Accordion,Button} from "react-bootstrap"
 
 // styles
 
-
-
+const video_release_dates = {
+  h1: new Date(6,9,2022)
+}
+const today = new Date()
 
 // markup
 const CodingPage = () => {
-
 
   return (
     <main>
@@ -19,7 +20,7 @@ const CodingPage = () => {
 
         <hr className="my-4"></hr>
         <p>
-          The Python Crash Course is a free multivideo tutorial that teaches the basics of python programming.
+          The Python Crash Course is a free multivideo course that teaches the basics of python programming.
           Topics covered in the course include variables, conditionals, loops, functions, classes, and tips for debugging.
           Each lesson is described below and the video playlist for this course can be accessed on <a href='https://www.youtube.com/watch?v=QZgGpCXGH54&list=PLsisEWxVRoyhEfXIsGJzFx2Xse7tQ3GGf'>YouTube</a>.
         </p>
@@ -42,8 +43,14 @@ const CodingPage = () => {
               <li>How to install python</li>
               <li>Text Editors and IDEs for coding in python</li>
             </ul>
-            <br></br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/rRp4is2MExo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NaLtBvxNIPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div style={{"padding":"2%"}}>
+              Additional Resources: <a href="https://bananachiptech.medium.com/introduction-to-programming-dad44b524e05">Written Content</a>
+            </div>
+
             </Card.Body>
           </Accordion.Collapse>
         </Card>
@@ -60,10 +67,11 @@ const CodingPage = () => {
               <ul>
                 <li>Input</li>
                 <li>Output</li>
+                <li>Comments</li>
               </ul>
             </div>
             <div>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/QZgGpCXGH54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QZgGpCXGH54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div>
               Homework 1 problems:
@@ -84,7 +92,7 @@ const CodingPage = () => {
             </Card.Body>
           </Accordion.Collapse>
         </Card>
-        <Card>
+        {/*<Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="2">
              Lesson 3: Variables
@@ -112,20 +120,65 @@ const CodingPage = () => {
                     </ul>
                 </li>
               </ul>
-              <br></br>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/CsybBZ-TnSI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/CsybBZ-TnSI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+
+              <div>
+              Homework 2 problems:
+
+              <ol>
+                <li>Ask the user for a number. Multiply the number by 10 and print it back out to the user </li>
+
+                <li>Ask the user for two numbers. Divide the first number by the second number and print out the result.</li>
+
+                <li>Ask the user for their name, age, and favorite food. Print out 1 message to the user with all of this information.</li>
+
+                <li>Ask the user for their year of birth. Calculate how old they are based on todays year. Return this result back out to the user </li>
+
+                <li>Ask the user for three numbers and make a list out of these numbers. Print out the resulting list.</li>
+
+                <li>ccess the first and last element in a list and print it out to the screen. Make sure to test your code on lists of various sizes! Hint: <code>len(<em>your list variable</em>)</code> returns the number of elements in the list</li>
+
+                <li>Create a 10 element long list. Ask the user for a number between 1 and 10 and another number. Insert the second number into your created list at the position of the first number.
+                        <br></br>Example:
+                        <br></br>
+                        <code>
+                        User Input: 3, 50<br></br>
+                        samplestartinglist = [1,2,3,4,5,8,6,9,10]<br></br>
+
+                        Program Output: [1,2,3,50,5,8,6,9,10]
+                        </code></li>
+              </ol>
+            </div>
+            <div>
+              Homework 2 Solutions: Video Coming Soon!
+            </div>
+
 
             </Card.Body>
           </Accordion.Collapse>
         </Card>
-        {/*<Card>
+       <Card>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="1">
-             Lesson 4
+            <Accordion.Toggle as={Button} variant="link" eventKey="3">
+             Lesson 4: Conditionals
             </Accordion.Toggle>
           </Card.Header>
-          <Accordion.Collapse eventKey="1">
-            <Card.Body>Hello! I'm another body</Card.Body>
+          <Accordion.Collapse eventKey="3">
+            <Card.Body>
+            <div>
+              Topics Covered in this lesson
+              <ul>
+                <li>Why use conditionals</li>
+                <li>if/else/elif</li>
+              </ul>
+            </div>
+            <div>
+              Video lecture coming soon!
+            </div>
+
+            </Card.Body>
           </Accordion.Collapse>
         </Card>
         <Card>
