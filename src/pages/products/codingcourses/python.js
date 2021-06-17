@@ -48,7 +48,7 @@ const CodingPage = () => {
             </div>
 
             <div style={{"padding":"2%"}}>
-              Additional Resources: <a href="https://bananachiptech.medium.com/introduction-to-programming-dad44b524e05">Written Content</a>
+              Additional Resources: <a href="https://bananachiptech.medium.com/introduction-to-programming-dad44b524e05">Introduction to Programming</a>
             </div>
 
             </Card.Body>
@@ -73,6 +73,10 @@ const CodingPage = () => {
             <div>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/QZgGpCXGH54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
+            <div style={{"padding":"2%"}}>
+              Additional Resources: <a href="https://bananachiptech.medium.com/dealing-with-input-and-output-in-python-e838f56fac90">Input and Output</a>
+            </div>
+
             <div>
               Homework 1 problems:
 
@@ -87,12 +91,12 @@ const CodingPage = () => {
               </ol>
             </div>
             <div>
-              Homework 1 Solutions: <a href="https://youtu.be/rRp4is2MExo">Video</a>
+              Homework 1 Solutions: <a href="https://youtu.be/rRp4is2MExo">Video</a>, <a href="https://bananachiptech.medium.com/input-and-output-practice-questions-6b22e961e03b">Code </a>
             </div>
             </Card.Body>
           </Accordion.Collapse>
         </Card>
-        {/*<Card>
+        <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="2">
              Lesson 3: Variables
@@ -152,14 +156,14 @@ const CodingPage = () => {
               </ol>
             </div>
             <div>
-              Homework 2 Solutions: Video Coming Soon!
+              Homework 2 Solutions: <a href='https://youtu.be/w3wk6n_2eJY'>Video</a>
             </div>
 
 
             </Card.Body>
           </Accordion.Collapse>
         </Card>
-       <Card>
+       {/*<Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="3">
              Lesson 4: Conditionals

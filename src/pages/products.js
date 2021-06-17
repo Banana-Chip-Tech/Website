@@ -2,6 +2,7 @@ import * as React from "react"
 import HeadNavbar from "../components/navbar"
 import ProductCards from "../components/productCards"
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 // styles
 
 const styles = {
