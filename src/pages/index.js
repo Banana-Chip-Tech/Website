@@ -1,6 +1,6 @@
 import * as React from "react"
 import HeadNavbar from "../components/navbar"
-
+import RSSReader from "../components/RSSReader"
 
 // styles
 
@@ -19,10 +19,7 @@ const IndexPage = () => {
         <p>Banana Chip Tech is dedicated to improving healthcare through computational means. Check out our list of available products!</p>
         <a className="btn btn-primary btn-lg" href="products" role="button">Products</a>
       </div>
-
-
-
-
+      <RSSReader></RSSReader>
     </main>
   )
 }

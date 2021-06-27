@@ -24,7 +24,7 @@ export default class HeadNavbar extends React.Component{
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link style={style} href="/">Home</Nav.Link>
-            <Nav.Link style={style} href="products">Products</Nav.Link>
+            <Nav.Link style={style} href="/products">Products</Nav.Link>
 
           </Nav>
 
