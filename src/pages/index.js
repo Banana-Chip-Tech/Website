@@ -19,7 +19,7 @@ const IndexPage = () => {
         <p>Banana Chip Tech is dedicated to improving healthcare through computational means. Check out our list of available products!</p>
         <a className="btn btn-primary btn-lg" href="products" role="button">Products</a>
       </div>
-      <RSSReader></RSSReader>
+      <RSSReader style={{width:"100%"}}></RSSReader>
     </main>
   )
 }
