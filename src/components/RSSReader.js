@@ -76,7 +76,7 @@ export default class RSSReader extends React.Component{
        return(
         <div >
         <div style={{display: 'flex', justifyContent: 'center'}}>
-        <Button style={style.button} size="lg" variant="outline-dark">Blog</Button>{' '}
+        <Button href="https://bananachiptech.medium.com" style={style.button} size="lg" variant="outline-dark">Blog</Button>{' '}
         </div>
         <div style={style.divstyle}>
         {this.state.data.map(e =>{
