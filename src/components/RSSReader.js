@@ -1,9 +1,36 @@
 import React from "react";
 import axios from "axios"
-import {List} from "react-easy-blog-post"
-import logo from '../images/UnnamedIcon.png'
-import { Row,Col,Container} from "react-bootstrap";
+import { Button} from "react-bootstrap";
 
+const style = {
+    textstyle: {
+        textAlign: "center"
+    },
+    divstyle:{
+        paddingLeft: "5%",
+        paddingRight: "5%",
+        paddingTop: "3%",
+        justifyContents:"center",
+        alignItems: "center"
+
+    },
+    flexer : {
+        display: 'flex',
+        flexDirection: 'row'
+    },
+
+    img:{
+        maxWidth:"250px",
+        maxHeight:"250px"
+    },
+    button:{
+        paddingRight:"4%",
+        paddingLeft:"4%",
+
+    },
+
+
+}
 export default class RSSReader extends React.Component{
     constructor(props){
         super(props)
@@ -20,20 +47,21 @@ export default class RSSReader extends React.Component{
                 let tmp = document.createElement("DIV");
                 tmp.innerHTML = element["description"];
                 var desc = tmp.textContent || tmp.innerText || "";
-                desc = desc.substring(0,400) + "..."
+                desc = desc.substring(0,125) + "..."
 
                 theArray[index] = {
                    author: element["author"],
-                   category: "python",
+                   category: element["categories"].join(", "),
                    title: element["title"],
                    date: element["pubDate"],
                    image:element["thumbnail"],
                    link: element["link"],
-                   description: desc
+                   description: desc,
+                   key: index
                 }
 
             })
-            this.setState({data:res["data"]["items"]})
+            this.setState({data:res["data"]["items"].splice(0,10)})
 
 
 
@@ -43,43 +71,42 @@ export default class RSSReader extends React.Component{
     }
 
    render(){
-       console.log(this.state.data)
-       var rows = this.state.data.reduce(function (rows, key, index) {
-        return (index % 2 == 0 ? rows.push([key])
-          : rows[rows.length-1].push(key)) && rows;
-      }, []);
-
-
 
 
        return(
+        <div >
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+        <Button style={style.button} size="lg" variant="outline-dark">Blog</Button>{' '}
+        </div>
+        <div style={style.divstyle}>
+        {this.state.data.map(e =>{
+            return (
+                <div class="card flex-row flex-wrap" style={{marginBottom:"2%"}}>
+                    <div class="card-header border-0 i">
+                        <img style={style.img} src={e["image"]} alt=""></img>
+                    </div>
+                <div class="card-block px-4" style={{padding:"2%"}}>
+                    <a style={{color:"black"}} href={e["link"]}><h4 class="card-title">{e["title"]}</h4></a>
+                    <span class="card-text">
+                    {e["description"]}
+
+                    </span>
+
+                </div>
+                <div class="w-100">
+
+                </div>
+                <div class="card-footer w-100 text-muted">
+                    {e["category"]}
+                </div>
+            </div>
 
 
-            <Container>
-                {this.state.data.map(elem =>{
-                    return (<Row>
-                    <Col><a  style={{textDecoration: "none"}}>
-                        <List article={elem[0]} theme={{imagePosition: "left",width: "50%",
-                    }} showCategory={true} />
-                    </a>
 
-                    </Col>
-                    <Col>
-                    <a style={{textDecoration: "none"}}><List article={elem[1]} theme={{imagePosition: "left",width: "50%",
-                    }} showCategory={true} /></a>
-                    </Col>
-
-                </Row>)
-
-
-               })}
-
-
-            </Container>
-
-
-
-
+            )
+        })}
+        </div>
+        </div>
 
 
 
