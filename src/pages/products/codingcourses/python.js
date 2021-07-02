@@ -170,7 +170,7 @@ const CodingPage = () => {
 
                     </ListGroup.Item>
                     <ListGroup.Item >
-                    Data Structure Variable Types
+                    <a href="https://medium.com/codex/data-structure-variable-types-666c837bec0f">Data Structure Variable Types</a>
                     </ListGroup.Item>
                   </ListGroup>
                   </Col>
@@ -237,7 +237,7 @@ const CodingPage = () => {
                   <p>Refer to the following resources for written tutorials!</p>
                   <ListGroup>
                     <ListGroup.Item >
-                       <p>Intro to Conditionals </p>
+                       <a href="https://medium.com/codex/conditional-statements-in-python-c10ece3ef84">Intro to Conditionals</a>
                     </ListGroup.Item>
 
                   </ListGroup>
@@ -360,14 +360,14 @@ const CodingPage = () => {
               <br></br>
              <p>Refer to the following for written homework solutions.</p>
             <ListGroup.Item >
-                       {/*<a href="https://bananachiptech.medium.com/input-and-output-practice-questions-6b22e961e03b">Input and Output Homework Solutions </a>*/}
+
                        Solutions coming soon!
                     </ListGroup.Item>
             </ListGroup>
 
             </Col>
             <Col>
-
+             <iframe style={{margin:"1.5%"}} width="560" height="315" src="https://www.youtube.com/embed/zWAewXw6ITM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </Col>
           </Row>
         </Container>
