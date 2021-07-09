@@ -47,7 +47,7 @@ export default class RSSReader extends React.Component{
                 let tmp = document.createElement("DIV");
                 tmp.innerHTML = element["description"];
                 var desc = tmp.textContent || tmp.innerText || "";
-                desc = desc.substring(0,125) + "..."
+                desc = desc.substring(0,125)
 
                 theArray[index] = {
                    author: element["author"],
