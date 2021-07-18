@@ -34,7 +34,7 @@ const CodingPage = () => {
 
         <hr className="my-4"></hr>
         <p>
-          The Python Crash Course is a free multivideo course that teaches the basics of python programming.
+          The Python Crash Course is a free course that teaches the basics of python programming.
           Topics covered in the course include variables, conditionals, loops, functions, classes, and tips for debugging.
           Each lesson is described below and the video playlist for this course can be accessed on <a href='https://www.youtube.com/watch?v=QZgGpCXGH54&list=PLsisEWxVRoyhEfXIsGJzFx2Xse7tQ3GGf'>YouTube</a>.
         </p>
@@ -392,12 +392,12 @@ const CodingPage = () => {
           lessonNumber={7}
           lessonName="Imports"
           concepts={["Modules","Packages"]}
-          lessonLink=""
+          lessonLink="https://www.youtube.com/embed/eHQVpjseRg0"
           hwvideo=""
           hw={[
             <p>Write a python program that generates 10 random numbers and prints them to the screen</p>,
             <div><p>Write a python program that prints the name of all of the files in the current folder.</p> HINT: You will have to google to find an appropriate <em>built in</em> module</div>,
-            <p>Write your own custom module using your code from HW5.3.</p>,
+            <p>Use the <a href="https://pypi.org/project/pydealer/">Pydealer package</a> to simulate the game <a href="https://www.rockmusiclist.com/gyusef.htm">Yousef</a></p>,
           ]}
           articles={[{"name":"Packages","link":"https://python.plainenglish.io/handling-packages-in-python-b1b9d7d86291"}]}
           lessonReleaseDate={new Date(2021,6,18)}
@@ -412,101 +412,10 @@ const CodingPage = () => {
           hw={[
             <p>Create a python program that simulates the game of Yousef. Instructions as how to play the game can be found on this <a href="https://www.rockmusiclist.com/gyusef.htm">website </a></p>,
           ]}
-          articles={[{"name":"Classes","link":"https://python.plainenglish.io/using-classes-in-python-9c53b4dc7e64"}]}
-          lessonReleaseDate={new Date(2021,6,18)}
-          hwReleaseDate={new Date(2021,6,21)}
+          articles={[{"name":"Modules","link":"https://python.plainenglish.io/how-to-handle-modules-in-python-4c32357319b4"},{"name":"Classes","link":"https://python.plainenglish.io/using-classes-in-python-9c53b4dc7e64"}]}
+          lessonReleaseDate={new Date(2021,6,25)}
+          hwReleaseDate={new Date(2021,6,28)}
         ></ModuleCard>
-
-       
-
-
-
-
-          {/*<Accordion.Collapse eventKey="5">
-          <Card.Body>
-          <h3 style={{textAlign:"center"}}>Lesson 6 Resources</h3>
-          <Container>
-
-                <Row style={{paddingBottom:"2%"}}>
-                  <Col ><iframe style={{margin:"1.5%"}} width="560" height="315" src="https://www.youtube.com/embed/L2wxqzyoGlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </Col>
-                  <Col style={{margin:"1.5%"}}>
-                  <p>This lesson introduces the following python concepts!</p>
-                  <ul>
-                    <li>Functions</li>
-                  </ul>
-
-                  <p>Refer to the following resources for written tutorials!</p>
-                  <ListGroup>
-                    <ListGroup.Item >
-                       <a href="https://medium.com/codex/functions-in-python-71c8c120e853">Functions</a>
-                    </ListGroup.Item>
-
-                  </ListGroup>
-                  </Col>
-                </Row>
-                </Container>
-
-        <h3 style={{textAlign:"center"}}>Homework 5 </h3>
-        <Container>
-          <Row>
-            <Col>
-            <ListGroup>
-                    <ListGroup.Item >
-                    Write a program using functions that takes in two numbers, multiplies them together, and prints the result back out to the user.
-                    </ListGroup.Item>
-                    <ListGroup.Item >
-                    Write a program that uses functions to calculate any given number in the <a href="https://www.mathsisfun.com/numbers/fibonacci-sequence.html">Fibonacci sequence</a> .
-                    <br></br>
-                    Is there a way to optimize this using a data structure that we talked about previously?
-                    </ListGroup.Item>
-
-                    <ListGroup.Item>
-                    <p>Write a function that takes in two lists. The first list contains the value of a card (2 through 10 and then Jack, Queen, King, Ace). The second list contains the suit of the card. Calculate the total value of the cards passed in. Face cards are worth 10 points each and Aces are worth 1 point. Return the results back out to where the function was called.
-                    </p>
-
-                    </ListGroup.Item>
-            </ListGroup>
-            </Col>
-            <Col>
-             <iframe style={{margin:"1.5%"}} width="560" height="315" src="https://www.youtube.com/embed/zWAewXw6ITM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </Col>
-          </Row>
-        </Container>
-        </Card.Body>
-
-          </Accordion.Collapse>
-        </Card>
-        {/*<Card>
-          <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="1">
-             Lesson 2
-            </Accordion.Toggle>
-          </Card.Header>
-          <Accordion.Collapse eventKey="1">
-            <Card.Body>Hello! I'm another body</Card.Body>
-          </Accordion.Collapse>
-        </Card>
-        <Card>
-          <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="1">
-             Lesson 2
-            </Accordion.Toggle>
-          </Card.Header>
-          <Accordion.Collapse eventKey="1">
-            <Card.Body>Hello! I'm another body</Card.Body>
-          </Accordion.Collapse>
-        </Card>
-        <Card>
-          <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="1">
-             Lesson 2
-            </Accordion.Toggle>
-          </Card.Header>
-          <Accordion.Collapse eventKey="1">
-            <Card.Body>Hello! I'm another body</Card.Body>
-          </Accordion.Collapse>
-        </Card>*/}
       </Accordion>
 
 
