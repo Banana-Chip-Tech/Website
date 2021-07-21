@@ -2,6 +2,8 @@ import * as React from "react"
 import HeadNavbar from "../../components/navbar"
 import {Card,Button,CardGroup} from "react-bootstrap"
 import logo from '../../images/ProductImage.png'
+import logo2 from '../../images/bfbmr.png'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 // styles
 
@@ -23,7 +25,7 @@ const CodingPage = () => {
          To achieve this goal, Banana Chip Tech has created a series of courses targeted towards science students that aim to provide an introduction to important biotech coding concepts.
         </p>
       </div>
-      {/*<CardGroup>*/}
+     <CardGroup>
       <Card className="text-center" style={{ width: '18rem' ,alignItems: 'center',justifyContent: 'center',margin:'1%'}}>
            <Card.Img style={{ width: '18rem' }} variant="top" src={logo} />
             <Card.Body>
@@ -35,8 +37,8 @@ const CodingPage = () => {
             </Card.Body>
       </Card>
 
-      {/*<Card className="text-center" style={{ width: '18rem' ,alignItems: 'center',justifyContent: 'center',margin:'1%'}}>
-           <Card.Img style={{ width: '18rem' }} variant="top" src={logo} />
+     <Card className="text-center" style={{ width: '18rem' ,alignItems: 'center',justifyContent: 'center',margin:'1%'}}>
+           <Card.Img style={{ width: '18rem' }} variant="top" src={logo2} />
             <Card.Body>
               <Card.Title>BASH for Biomedical Research</Card.Title>
               <Card.Text>
@@ -45,7 +47,7 @@ const CodingPage = () => {
               <Button variant="primary" href="/products/codingcourses/BASH">View Course</Button>
             </Card.Body>
       </Card>
-  </CardGroup>*/}
+  </CardGroup>
 
 
 

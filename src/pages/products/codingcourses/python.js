@@ -393,13 +393,13 @@ const CodingPage = () => {
           lessonName="Imports"
           concepts={["Modules","Packages"]}
           lessonLink="https://www.youtube.com/embed/eHQVpjseRg0"
-          hwvideo=""
+          hwvideo="https://www.youtube.com/embed/qnSGzduH780"
           hw={[
             <p>Write a python program that generates 10 random numbers and prints them to the screen</p>,
             <div><p>Write a python program that prints the name of all of the files in the current folder.</p> HINT: You will have to google to find an appropriate <em>built in</em> module</div>,
-            <p>Use the <a href="https://pypi.org/project/pydealer/">Pydealer package</a> to simulate the game <a href="https://www.rockmusiclist.com/gyusef.htm">Yousef</a></p>,
+            <p>BONUS: Use the <a href="https://pypi.org/project/pydealer/">Pydealer package</a> to simulate the game <a href="https://www.rockmusiclist.com/gyusef.htm">Yousef</a></p>,
           ]}
-          articles={[{"name":"Packages","link":"https://python.plainenglish.io/handling-packages-in-python-b1b9d7d86291"}]}
+          articles={[{"name":"Packages","link":"https://python.plainenglish.io/handling-packages-in-python-b1b9d7d86291"},{"name":"Modules","link":"https://python.plainenglish.io/how-to-handle-modules-in-python-4c32357319b4"}]}
           lessonReleaseDate={new Date(2021,6,18)}
           hwReleaseDate={new Date(2021,6,21)}
         ></ModuleCard>
@@ -407,12 +407,12 @@ const CodingPage = () => {
           lessonNumber={8}
           lessonName="Classes"
           concepts={["Classes"]}
-          lessonLink=""
+          lessonLink="https://www.youtube.com/embed/mw2yhAMKqGg"
           hwvideo=""
           hw={[
             <p>Create a python program that simulates the game of Yousef. Instructions as how to play the game can be found on this <a href="https://www.rockmusiclist.com/gyusef.htm">website </a></p>,
           ]}
-          articles={[{"name":"Modules","link":"https://python.plainenglish.io/how-to-handle-modules-in-python-4c32357319b4"},{"name":"Classes","link":"https://python.plainenglish.io/using-classes-in-python-9c53b4dc7e64"}]}
+          articles={[{"name":"Classes","link":"https://python.plainenglish.io/using-classes-in-python-9c53b4dc7e64"}]}
           lessonReleaseDate={new Date(2021,6,25)}
           hwReleaseDate={new Date(2021,6,28)}
         ></ModuleCard>
