@@ -1,9 +1,11 @@
 import * as React from "react"
 import HeadNavbar from "../components/navbar"
 import RSSReader from "../components/RSSReader"
-
+import Helmet from "react-helmet"
 // styles
+import ConvertKitForm from 'convertkit-react'
 
+const MY_FORM_ID = 2649600
 
 // markup
 const IndexPage = () => {
@@ -20,6 +22,16 @@ const IndexPage = () => {
         <a className="btn btn-primary btn-lg" href="products" role="button">Products</a>
       </div>
       <RSSReader style={{width:"100%"}}></RSSReader>
+      <div style={{marginLeft:'25%',alignItems:"center"}}>
+      <ConvertKitForm formId={MY_FORM_ID}  template="Mills"/>
+      </div>
+
+
+
+
+
+
+
     </main>
   )
 }

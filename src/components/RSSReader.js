@@ -72,31 +72,33 @@ export default class RSSReader extends React.Component{
 
    render(){
 
-
+       var counter = -1
        return(
         <div >
         <div style={{display: 'flex', justifyContent: 'center'}}>
         <Button href="https://bananachiptech.medium.com" style={style.button} size="lg" variant="outline-dark">Blog</Button>{' '}
         </div>
         <div style={style.divstyle}>
+
         {this.state.data.map(e =>{
+            counter =counter + 1
             return (
-                <div class="card flex-row flex-wrap" style={{marginBottom:"2%"}}>
-                    <div class="card-header border-0 i">
+                <div key={counter} className="card flex-row flex-wrap" style={{marginBottom:"2%"}}>
+                    <div className="card-header border-0 i">
                         <img style={style.img} src={e["image"]} alt=""></img>
                     </div>
-                <div class="card-block px-4" style={{padding:"2%"}}>
-                    <a style={{color:"black"}} href={e["link"]}><h4 class="card-title">{e["title"]}</h4></a>
-                    <span class="card-text">
+                <div className="card-block px-4" style={{padding:"2%"}}>
+                    <a style={{color:"black"}} href={e["link"]}><h4 className="card-title">{e["title"]}</h4></a>
+                    <span className="card-text">
                     {e["description"]}
 
                     </span>
 
                 </div>
-                <div class="w-100">
+                <div className="w-100">
 
                 </div>
-                <div class="card-footer w-100 text-muted">
+                <div className="card-footer w-100 text-muted">
                     {e["category"]}
                 </div>
             </div>

@@ -49,7 +49,7 @@ export default class ModuleCard extends React.Component{
                 </Row>
                 </Container>
 
-        <h3 style={{textAlign:"center"}}>Homework {this.props.lessonNumber-1} </h3>
+        {this.props.noHW ? <div></div> : <div><h3 style={{textAlign:"center"}}>Homework {this.props.lessonNumber-1} </h3>
         <Container>
           <Row>
             <Col>
@@ -69,7 +69,7 @@ export default class ModuleCard extends React.Component{
 
              </Col>
           </Row>
-        </Container>
+        </Container> </div>}
         </Card.Body>
 
           </Accordion.Collapse>

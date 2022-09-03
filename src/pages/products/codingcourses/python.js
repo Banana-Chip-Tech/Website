@@ -40,6 +40,7 @@ const CodingPage = () => {
         </p>
       </div>
       <Accordion style={{margin:"1%"}}defaultActiveKey="0">
+  
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">

@@ -37,16 +37,8 @@ const CodingPage = () => {
             </Card.Body>
       </Card>
 
-     <Card className="text-center" style={{ width: '18rem' ,alignItems: 'center',justifyContent: 'center',margin:'1%'}}>
-           <Card.Img style={{ width: '18rem' }} variant="top" src={logo2} />
-            <Card.Body>
-              <Card.Title>BASH for Biomedical Research</Card.Title>
-              <Card.Text>
-                Join Banana Chip Tech for our course on using BASH for scientific research!
-              </Card.Text>
-              <Button variant="primary" href="/products/codingcourses/BASH">View Course</Button>
-            </Card.Body>
-      </Card>
+
+
   </CardGroup>
 
 
