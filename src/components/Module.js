@@ -1,5 +1,5 @@
 import React from "react"
-import {Card,Accordion,Button,Container,Row,Col,ListGroup,Table} from "react-bootstrap"
+import {Card,Accordion,Button,Container,Row,Col,ListGroup} from "react-bootstrap"
 
 export default class ModuleCard extends React.Component{
 

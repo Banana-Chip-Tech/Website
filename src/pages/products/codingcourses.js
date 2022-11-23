@@ -2,14 +2,9 @@ import * as React from "react"
 import HeadNavbar from "../../components/navbar"
 import {Card,Button,CardGroup} from "react-bootstrap"
 import logo from '../../images/ProductImage.png'
-import logo2 from '../../images/bfbmr.png'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 // styles
-
-
-
-
 // markup
 const CodingPage = () => {
 

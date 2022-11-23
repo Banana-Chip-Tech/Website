@@ -1,7 +1,6 @@
 import * as React from "react"
 import HeadNavbar from "../components/navbar"
 import RSSReader from "../components/RSSReader"
-import Helmet from "react-helmet"
 // styles
 import ConvertKitForm from 'convertkit-react'
 
