@@ -1,15 +1,21 @@
-import * as React from "react"
+import React, { useState } from 'react';
 import HeadNavbar from "../components/navbar"
 import RSSReader from "../components/RSSReader"
 // styles
 import ConvertKitForm from 'convertkit-react'
-
+import {Button,Row,Col} from "react-bootstrap"
 const MY_FORM_ID = 2649600
 
+var bar = {
+  position: 'fixed',
+  padding: '1%',
+  bottom: 0,
+  backgroundColor: '#eeeeee',
+  width:'100%'
+}
 // markup
 const IndexPage = () => {
-
-
+  const [show,setShow] = useState(true)
   return (
     <main >
       <HeadNavbar></HeadNavbar>
@@ -24,12 +30,13 @@ const IndexPage = () => {
       <div style={{marginLeft:'25%',alignItems:"center"}}>
       <ConvertKitForm formId={MY_FORM_ID}  template="Mills"/>
       </div>
+      {show ? <div style={bar}>
+            <Row>
+              <Col xs={6} md={10}> <p >We use cookies to enhance user experience in accordance with our <a href="/termsofservice">Terms of Service</a> and <a href="/privacypolicy">Privacy Policy</a>. </p></Col>
+               <Col className="float-right"><Button onClick={() =>{setShow(false)}} variant='success'>I understand </Button></Col>
+            </Row>
 
-
-
-
-
-
+        </div> :<></>}
 
     </main>
   )

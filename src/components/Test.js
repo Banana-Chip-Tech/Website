@@ -1,16 +1,37 @@
 import React from "react"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card,Accordion,Button,Container,Row,Col,ListGroup} from "react-bootstrap"
+import { useAccordionButton } from 'react-bootstrap/AccordionButton'
 
-export default class ModuleCard extends React.Component{
+const style ={
+  color: "white"
+}
 
-    render(){
+function CustomToggle({ children, eventKey }) {
+    const decoratedOnClick = useAccordionButton(eventKey, () =>
+      console.log('totally custom!'),
+    );
+
+    return (
+      <button
+        type="link"
+        style={{ backgroundColor: 'pink' }}
+        onClick={decoratedOnClick}
+      >
+        {children}
+      </button>
+    );
+  }
+
+export default class Test extends React.Component{
+   render() {
         var todays_date = new Date()
         return(
-        <Card>
+            <Card>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey={this.props.lessonNumber - 1}>
+            <CustomToggle eventKey={this.props.lessonNumber - 1}>
              Lesson {this.props.lessonNumber}: {this.props.lessonName}
-            </Accordion.Toggle>
+            </CustomToggle>
           </Card.Header>
           <Accordion.Collapse eventKey={this.props.lessonNumber - 1}>
           <Card.Body>
@@ -74,6 +95,7 @@ export default class ModuleCard extends React.Component{
 
           </Accordion.Collapse>
         </Card>)
-    }
-}
 
+
+     }
+}

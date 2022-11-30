@@ -1,31 +1,26 @@
 import * as React from "react"
 import HeadNavbar from "../../../components/navbar"
 import {Card,Accordion,Button,Container,Row,Col,ListGroup,Table} from "react-bootstrap"
-import ModuleCard from "../../../components/Module"
+import ModuleCard from "../../../components/ModuleCard"
+
 
 // styles
 
-/*const video_release_dates = {
-  h1: new Date(6,9,2022)
-}
-const today = new Date()
-
 
 // Based off of https://stackoverflow.com/questions/60764233/how-to-optimize-this-if-else-block-to-compare-date-in-simple-react-app
-function compareDateWithoutTime(dateA, dateB) {
+/*function compareDateWithoutTime(dateA, dateB) {
   let date1 = new Date(dateA);
   let date2 = new Date(dateB);
   date1.setHours(0, 0, 0, 0);
   date2.setHours(0, 0, 0, 0);
   return date2.getTime() - date1.getTime();
-}
-*/
+}*/
+
 
 
 
 // markup
-const CodingPage = () => {
-
+const PythonPage = () => {
   return (
     <main>
       <HeadNavbar></HeadNavbar>
@@ -39,17 +34,14 @@ const CodingPage = () => {
           Each lesson is described below and the video playlist for this course can be accessed on <a href='https://www.youtube.com/watch?v=QZgGpCXGH54&list=PLsisEWxVRoyhEfXIsGJzFx2Xse7tQ3GGf'>YouTube</a>.
         </p>
       </div>
-      <Accordion style={{margin:"1%"}}defaultActiveKey="0">
-  
-        <Card>
+      <Accordion style={{margin:"1%"}} defaultActiveKey="0">
+        {/*<Card>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="0">
-              Lesson 1: Introduction to python3
-            </Accordion.Toggle>
+            <Accordion.Toggle as={Button} variant="link" eventKey="0">Lesson 1: Introduction to python3</Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
             <Card.Body>
-            <h3 style={{textAlign:"center"}}>Lesson 1 Resources</h3>
+              <h3 style={{textAlign:"center"}}>Lesson 1 Resources</h3>
               <Container>
                 <Row style={{paddingBottom:"2%"}}>
                   <Col ><iframe width="560" height="315" src="https://www.youtube.com/embed/NaLtBvxNIPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -216,136 +208,64 @@ const CodingPage = () => {
             </Card.Body>
           </Accordion.Collapse>
         </Card>
-        <Card>
-          <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="3">
-             Lesson 4: Conditionals
-            </Accordion.Toggle>
-          </Card.Header>
-          <Accordion.Collapse eventKey="3">
-            <Card.Body>
 
-            <h3 style={{textAlign:"center"}}>Lesson 4 Resources</h3>
-              <Container>
-                <Row style={{paddingBottom:"2%"}}>
-                  <Col ><iframe width="560" height="315" src="https://www.youtube.com/embed/PboWp9wgQsc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </Col>
-                  <Col style={{margin:"1.5%"}}>
-                  <p>This lesson introduces the following python concepts!</p>
-                  <ul>
-                    <li>Conditional Statements (if/else/elif)</li>
-                  </ul>
+          */}
+        <ModuleCard
+          lessonNumber={4}
+          lessonName="Conditionals"
+          concepts={["Conditional Statements (if/else/elif)"]}
+          lessonLink="https://www.youtube.com/embed/PboWp9wgQsc"
+          hwvideo="https://www.youtube.com/embed/z503pozNqgM"
+          hw={[
+            <p>Write a program that asks a user for their birthday (month day and year). Calculate how old the user is. Determine whether the user is an adult (18 years and older). Return your results to your user.</p>,
+            <div><p>Write a program that creates three random numbers. Determine which number is the greatest and which number is the least. HINT: The following code snippet creates a random number.
+            </p>
+            <code>
+            # Import the random module
+            import random <br></br>
 
-                  <p>Refer to the following resources for written tutorials!</p>
-                  <ListGroup>
-                    <ListGroup.Item >
-                       <a href="https://medium.com/codex/conditional-statements-in-python-c10ece3ef84">Intro to Conditionals</a>
-                    </ListGroup.Item>
+            # Use the random module to get a random number between 0 to 100.
+            random.randint(0,100) <br></br>
+            </code>
+            </div>,
+            <p>
+            Write a program that presents 5 products with associated prices to the user. Have the user pick 2 products that they want to buy. Calculate the total cost for these products. Print out to the user the total cost of purchase.
+            </p>,
+            <div>BONUS QUESTION: The following three sequences come from the KRAS gene (https://www.ncbi.nlm.nih.gov/nuccore/NM_001369786.1?report=fasta).
 
-                  </ListGroup>
-                  </Col>
-                </Row>
-                </Container>
+              <code>
+              GGCGGC
+              TTTGCCATAAATAATACTAAATCATTT
+              GAAACAAATTAATGAAGCTTTTGAATCATCCCTATTCTGTGTTTTATCTAGTCACATAAATGGATTAATT
+              </code>
 
-        <h3 style={{textAlign:"center"}}>Homework 3 </h3>
-        <Container>
-          <Row>
-            <Col>
-            <ListGroup>
-                    <ListGroup.Item >
-                    Write a program that asks a user for their birthday (month day and year). Calculate how old the user is. Determine whether the user is an adult (18 years and older). Return your results to your user.
-                    </ListGroup.Item>
-                    <ListGroup.Item >
-                    Write a program that creates three random numbers. Determine which number is the greatest and which number is the least. HINT: The following code snippet creates a random number.
+              Write a program that determine if the first three base pairs are equal to the last three base pairs for each sequence. Your code should be able to work on all test cases without modification. </div>,
+              <div>
+                <p>BONUS QUESTION: Using the following mRNA codon chart (https://www.shsu.edu/academics/agricultural-sciences-and-engineering-technology/documents/mRNAcodonchart.pdf), write a program that coverts a three base pair sequence to the corresponding an amino acid.
+                </p>
+                <p>Challenge: Can you do this without conditional statements?</p>
+              </div>
 
-                    <code>
-                    # Import the random module
-                    import random
+          ]}
+          articles={[{name:"Intro to Conditionals","link":"https://medium.com/codex/conditional-statements-in-python-c10ece3ef84"}]}
+          lessonReleaseDate={new Date(2021,6,11)}
+          hwReleaseDate={new Date(2021,6,14)}
+        ></ModuleCard>
 
-                    # Use the random module to get a random number between 0 to 100.
-                    random.randint(0,100)
-                    </code>
-
-                    </ListGroup.Item>
-                    <ListGroup.Item>
-                    Write a program that presents 5 products with associated prices to the user. Have the user pick 2 products that they want to buy. Calculate the total cost for these products. Print out to the user the total cost of purchase.
-                    </ListGroup.Item>
-                    <ListGroup.Item>BONUS QUESTION: The following three sequences come from the KRAS gene (https://www.ncbi.nlm.nih.gov/nuccore/NM_001369786.1?report=fasta).
-
-                      <code>
-                      GGCGGC
-                      TTTGCCATAAATAATACTAAATCATTT
-                      GAAACAAATTAATGAAGCTTTTGAATCATCCCTATTCTGTGTTTTATCTAGTCACATAAATGGATTAATT
-                      </code>
-
-                      Write a program that determine if the first three base pairs are equal to the last three base pairs for each sequence. Your code should be able to work on all test cases without modification. </ListGroup.Item>
-                      <ListGroup.Item>
-                        <p>BONUS QUESTION: Using the following mRNA codon chart (https://www.shsu.edu/academics/agricultural-sciences-and-engineering-technology/documents/mRNAcodonchart.pdf), write a program that coverts a three base pair sequence to the corresponding an amino acid.
-                        </p>
-                        <p>Challenge: Can you do this without conditional statements?</p>
-                      </ListGroup.Item>
-            </ListGroup>
-
-            </Col>
-            <Col>
-            <iframe style={{margin:"6%"}} width="560" height="315" src="https://www.youtube.com/embed/z503pozNqgM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </Col>
-          </Row>
-        </Container>
-
-            </Card.Body>
-          </Accordion.Collapse>
-        </Card>
-       <Card>
-          <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="4">
-             Lesson 5: Loops
-            </Accordion.Toggle>
-          </Card.Header>
-          <Accordion.Collapse eventKey="4">
-            <Card.Body>
-            <Container>
-                <Row style={{paddingBottom:"2%"}}>
-                  <Col ><iframe style={{margin:"1.5%"}} width="560" height="315" src="https://www.youtube.com/embed/L2wxqzyoGlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </Col>
-                  <Col style={{margin:"1.5%"}}>
-                  <p>This lesson introduces the following python concepts!</p>
-                  <ul>
-                    <li>While Loops</li>
-                    <li>For Loops</li>
-                  </ul>
-
-                  <p>Refer to the following resources for written tutorials!</p>
-                  <ListGroup>
-                    <ListGroup.Item >
-                    <a href="https://python.plainenglish.io/loops-in-python-9d32a9200bf1">Loops</a>
-                    </ListGroup.Item>
-
-                  </ListGroup>
-                  </Col>
-                </Row>
-                </Container>
-
-        <h3 style={{textAlign:"center"}}>Homework 4 </h3>
-        <Container>
-          <Row>
-            <Col>
-            <ListGroup>
-                    <ListGroup.Item >
-                     Write a program that prints out a message until the user enters q.
-                    </ListGroup.Item>
-                    <ListGroup.Item >
-                    Write a program that prints out "I like cheese" backwards. Challenge: Can you do this entire program in less than 3 lines of code? </ListGroup.Item>
-
-                    <ListGroup.Item>
-                    <p>Write a program that presents the user with 10 items and associated prices. Ask the user to pick 5 items. Calculate the total price of the items.
-                    </p>
-                    <p>
-                    HINT: Using loops and some of the data structure type variables we talked about in previous lessons will make this program much easier! Be sure to check out the documentation for the data structures you use! There are some nifty functions that are super useful!
-                    </p>
-                    </ListGroup.Item>
-                    <ListGroup.Item>
-                      Write a program that
+        <ModuleCard
+          lessonNumber={5}
+          lessonName="Loops"
+          concepts={["While Loops","For Loops"]}
+          lessonLink="https://www.youtube.com/embed/L2wxqzyoGlk"
+          hwvideo="https://www.youtube.com/embed/zWAewXw6ITM"
+          hw={[
+                <p>Write a program that prints out a message until the user enters q.</p>,
+                <p>Write a program that prints out "I like cheese" backwards. Challenge: Can you do this entire program in less than 3 lines of code? </p>,
+                <div><p>Write a program that presents the user with 10 items and associated prices. Ask the user to pick 5 items. Calculate the total price of the items.</p>
+                    <p>HINT: Using loops and some of the data structure type variables we talked about in previous lessons will make this program much easier! Be sure to check out the documentation for the data structures you use! There are some nifty functions that are super useful!</p>
+                </div>,
+                <div>
+                      <p>Write a program that</p>
                       <ul>
                         <li>reads in the KRAS DNA sequence (found <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_004985.5?report=fasta">here</a>)</li>
                         <li>transcribes the DNA to mRNA</li>
@@ -353,25 +273,16 @@ const CodingPage = () => {
                       </ul>
                      <p>Do this for all three reading frames. Assume that no processing of the mRNA occurs. Save your results to 3 files.
                      </p>
-                     <p>HINT: The link provided links to the KRAS gene in the FAFSA file format on the NCBI website. Please note that the first line in FAFSA format contains a description of the sequence. For simplicity sake, delete this line in your file. Additionally, use this mRNA codon chart (https://www.shsu.edu/academics/agricultural-sciences-and-engineering-technology/documents/mRNAcodonchart.pdf) to translate the DNA. Finally, the following code segment will remove new lines in a string.
+                     <p>HINT: The link provided links to the KRAS gene in the FAFSA file format on the NCBI website. Please note that the first line in FAFSA format contains a description of the sequence. For simplicity sake, delete this line in your file. Additionally, use this <a href="https://www.shsu.edu/academics/agricultural-sciences-and-engineering-technology/documents/mRNAcodonchart.pdf">mRNA codon chart </a>to translate the DNA. Finally, the following code segment will remove new lines in a string.
                      </p>
                     <code>striped_str = mystring.replace("\n","")</code>
-                    </ListGroup.Item>
-            </ListGroup>
+                    </div>
 
-
-            </Col>
-            <Col>
-             <iframe style={{margin:"1.5%"}} width="560" height="315" src="https://www.youtube.com/embed/zWAewXw6ITM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </Col>
-          </Row>
-        </Container>
-
-
-
-            </Card.Body>
-          </Accordion.Collapse>
-        </Card>
+          ]}
+          articles={[{name:"Loops","link":"https://python.plainenglish.io/loops-in-python-9d32a9200bf1"}]}
+          lessonReleaseDate={new Date(2021,6,11)}
+          hwReleaseDate={new Date(2021,6,14)}
+        ></ModuleCard>
 
         <ModuleCard
           lessonNumber={6}
@@ -417,15 +328,11 @@ const CodingPage = () => {
           lessonReleaseDate={new Date(2021,6,25)}
           hwReleaseDate={new Date(2021,6,28)}
         ></ModuleCard>
+
       </Accordion>
-
-
-
-
-
 
     </main>
   )
 }
 
-export default CodingPage
+export default PythonPage
