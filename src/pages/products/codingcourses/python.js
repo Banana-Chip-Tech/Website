@@ -29,6 +29,7 @@ const PythonPage = () => {
           lessonLink="https://www.youtube.com/embed/NaLtBvxNIPE"
           articles={[{name:"Introduction to Programming","link":"https://bananachiptech.medium.com/introduction-to-programming-dad44b524e05"}]}
           lessonReleaseDate={new Date(2021,6,11)}
+          noHW={true}
         ></ModuleCard>
           <ModuleCard
           lessonNumber={2}
@@ -47,7 +48,7 @@ const PythonPage = () => {
         ></ModuleCard>
           <ModuleCard
           lessonNumber={3}
-          lessonName="Conditionals"
+          lessonName="Variables"
           concepts={["Basic Variable Types (int,float,boolean,char)","Data Structure Variable Types (string,list,tuple,dictionary)"]}
           lessonLink="https://www.youtube.com/embed/CsybBZ-TnSI"
           hwvideo="https://www.youtube.com/embed/w3wk6n_2eJY"
